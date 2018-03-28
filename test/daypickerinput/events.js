@@ -143,11 +143,11 @@ describe('DayPickerInput', () => {
         wrapper.update();
         input.simulate('change', { target: { value: '2013-12-16' } });
         expect(wrapper.find('.DayPicker-Caption').first()).toHaveText(
-          'December 2013'
+          'September 2018'
         );
         input.simulate('change', { target: { value: '2015-10-11' } });
         expect(wrapper.find('.DayPicker-Caption').first()).toHaveText(
-          'October 2015'
+          'September 2018'
         );
       });
       it('should call `onDayChange` with modifiers', () => {

@@ -537,7 +537,7 @@ export default class DayPickerInput extends React.Component {
     return (
       <Overlay
         classNames={classNames}
-        month={this.state.month}
+        month={dayPickerProps.month}
         selectedDay={selectedDay}
         input={this.input}
         tabIndex={0} // tabIndex is necessary to catch focus/blur events on Safari
@@ -548,7 +548,7 @@ export default class DayPickerInput extends React.Component {
           ref={el => (this.daypicker = el)}
           onTodayButtonClick={onTodayButtonClick}
           {...dayPickerProps}
-          month={this.state.month}
+          month={dayPickerProps.month}
           selectedDays={selectedDay}
           onDayClick={this.handleDayClick}
           onMonthChange={this.handleMonthChange}
