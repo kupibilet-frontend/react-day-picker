@@ -1,5 +1,5 @@
 {
-  "name": "react-day-picker",
+  "name": "@kupibilet/react-day-picker",
   "version": "7.1.4",
   "description": "Flexible date picker component for React",
   "main": "DayPicker.js",
