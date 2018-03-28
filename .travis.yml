@@ -1,0 +1,30 @@
+sudo: false
+
+language: node_js
+node_js:
+- '9'
+
+git:
+  depth: 2
+
+cache:
+  yarn: true
+
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH=$HOME/.yarn/bin:$PATH
+
+script:
+  - yarn build
+
+before_deploy:
+  - yarn global add makeshift && makeshift -r registry.npmjs.org
+
+deploy:
+  - provider: npm
+    email: v7rulnik@gmail.com
+    skip_cleanup: true
+    api_key: $NPM_TOKEN
+    on:
+      tags: true
+      repo: kupibilet-frontend/react-day-picker
