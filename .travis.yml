@@ -22,7 +22,7 @@ before_deploy:
 
 deploy:
   - provider: npm
-    email: v7rulnik@gmail.com
+    email: $NPM_PUBLISHER_EMAIL
     skip_cleanup: true
     api_key: $NPM_TOKEN
     on:
